@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 	let email = req.query.email
 	let company = req.query.company
 	// if company is not input then give no response and dont send the email
-	if (email.includes("yahoo.com") || typeof company == "undefined"){
+	if (email.includes("@") == false || typeof company == "undefined" || company == ""){
 		email = "Not a Valid Email"
 	}
 	console.log(email)
@@ -41,6 +41,7 @@ app.get('/', (req, res) => {
 
 	res.send('you reached server <br> Email sent to: ' + email + "<br> From the company: " + company)
 	}
+	// no response if email is invalid
 })
 app.listen(port, () =>{
 	console.log(`Nodemailer app waiting for GET on port ${port}`)
