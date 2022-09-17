@@ -16,3 +16,6 @@ A nodejs email server app made with express, nodemailer and postfix. Made on Ope
 # Sending GETs to send emails
 	Open a browser and send some get requests with email and company parameters filled 'http://yourserverip:yourport/?email=email@here.com&company=CompanyHere'
 	After doing this your emails will send and the parameters sent will show in the nodejs console log
+
+# main.cf
+	This is the postfix configuration file for OpenBSD, use for reference.
